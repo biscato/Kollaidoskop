@@ -13,7 +13,7 @@ public class KollaidoskopServlet extends HttpServlet {
         User user = userService.getCurrentUser();
 
         if (user != null){
-			Questionaire questions = new Questionaire();
+			QuestionaireOld questions = new QuestionaireOld();
 			String displayString = questions.getQuestionaire();
 			resp.setContentType("plain/text");
 			resp.getWriter().println(displayString);
