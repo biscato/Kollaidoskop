@@ -6,7 +6,7 @@
         var req = new XMLHttpRequest();
 
         // Create a 'GET' request w/ an optional callback handler
-        req.open('GET', 'http://192.168.178.23:8888/kollaidoskop');// + query, async);
+        req.open('GET', 'http://192.168.0.100:8888/questionaire');// + query, async);
 
             req.onreadystatechange = function() {
                 if(req.readyState == 4 && req.status == 200) {

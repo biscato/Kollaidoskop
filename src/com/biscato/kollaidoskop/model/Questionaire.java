@@ -16,7 +16,9 @@ public class Questionaire {
 	@PrimaryKey //Annotation for jersey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
+	private String language;
 	private String description;
+	private String category;
 	
 	public Questionaire(){
 		super();
@@ -25,6 +27,20 @@ public class Questionaire {
 	public Questionaire(String description) {
 		super();
 		this.description = description;
+	}	
+	
+	public Questionaire(String language, String description, String category) {
+		super();
+		this.language = language;
+		this.description = description;
+		this.category = category;
+	}
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 
 	public String getDescription() {
@@ -35,6 +51,14 @@ public class Questionaire {
 		this.description = description;
 	}
 
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
 	@XmlElement // why an annotation only for Id? why not for other attribute?
 	public long getId() {
 		if (key != null)
