@@ -1,24 +1,27 @@
 package com.biscato.kollaidoskop.model;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import com.google.appengine.api.datastore.Key;
 
+@XmlRootElement
+@PersistenceCapable
 public class Questionaire {
+	
+	@PrimaryKey //Annotation for jersey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private Key key;
+	private String description;
 	
 	public Questionaire(){
 		super();
 	}
 	
-	@PrimaryKey //Annotation for jersey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Key key;
-	
-	private String description;
-
 	public Questionaire(String description) {
 		super();
 		this.description = description;
