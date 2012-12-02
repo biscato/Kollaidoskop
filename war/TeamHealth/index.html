@@ -1,47 +1,65 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
     <link rel="apple-touch-icon" href="assets/icon57x57.jpeg" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/icon72x72.jpeg" />
     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon114x114.jpeg" />
-    <!--<link rel="apple-touch-startup-image" href="apple-touch-startup-image-320x460.png" />
-    <link rel="apple-touch-startup-image" sizes="768x1004" href="apple-touch-startup-image-768x1004.png" />
--->
-    <!--<title>Team Health Indicator</title>-->
+
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
 
     <script type="text/javascript" src="libs/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="libs/jquery.mobile-1.2.0.js"></script>
-        <!--<script type="text/javascript" src="scripts/main.js"></script>-->
+    <script type="text/javascript" src="scripts/central.js"></script>
 </head>
 
 <body>
 
 <!-----------------------Start----------------------->
 <div data-role="page" id="start" class="type-interior">
+
     <div data-role="header">
         <h1>Home</h1>
-    </div><!-- /header -->
+    </div>
+
     <ul data-role="listview">
         <li><a href="#myVotes" data-transition="slide">My Votings</a></li>
         <li><a href="#vote" data-transition="slide">Vote Now!</a></li>
         <li><a href="#teamResults" data-transition="slide">Team Results</a></li>
-        <li><a href="questionsList.html" data-transition="slide">Questionaire</a></li>
+        <li><a href="#questions" data-transition="slide">Questionaire</a></li>
+        <!--<li><a href="questionsList.html" data-transition="slide">Questionaire</a></li>-->
         <li><a href="#playground" data-transition="slide">Playground</a></li>
     </ul>
+
     <div><p><a href="#about" data-rel="dialog" data-transition="slideup">About this app</a></p></div>
+
 </div>
+
+<div data-role="page" id="questions" class="type-interior">
+    <div data-role="header">
+        <a href="#start">Zur&uuml;ck</a>
+        <h1 id="votingHeader"></h1>
+    </div><!-- /header -->
+
+    <br>
+    <div data-role="content">
+        <div><label>Was kommt als JSON vom Server?</label></div>
+        <div id="JSON"></div>
+    </div>
+</div>
+
 
 <!-----------------------my Votes----------------------->
 <div data-role="page" id="myVotes" class="type-interior">
+
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
         <h1>My Votes</h1>
-    </div><!-- /header -->
+    </div>
 
     <div data-role="content">
         <label for="textarea-a">Frage 1:</label>
@@ -55,15 +73,18 @@
         </textarea>
         <label>Abgestimmt mit: 6</label>
     </div>
+
 </div>
 
 
 <!-----------------------Vote!----------------------->
 <div data-role="page" id="vote" class="type-interior">
+
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
         <h1>Vote!</h1>
     </div><!-- /header -->
+
     <div data-role="content">
         <label for="textarea-a">Question 1:</label>
 
@@ -81,14 +102,16 @@
         <button onclick="save()">Save</button>
         <button onclick="save()">Next</button>
     </div>
+
 </div>
 
 <!-----------------------Results----------------------->
 <div data-role="page" id="teamResults" class="type-interior">
+
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
         <h1>Results</h1>
-    </div><!-- /header -->
+    </div>
 
     <div data-role="content">
         <label for="textarea-a">Frage 1:</label>
@@ -102,6 +125,7 @@
         </textarea>
         <label>Abgestimmt mit: 6,44</label>
     </div>
+
 </div>
 
 <!-----------------------Playground----------------------->
