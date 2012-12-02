@@ -16,22 +16,31 @@
 
     <script type="text/javascript" src="libs/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="libs/jquery.mobile-1.2.0.js"></script>
+        <!--<script type="text/javascript" src="scripts/main.js"></script>-->
 </head>
 
 <body>
 
+<!-----------------------Start----------------------->
 <div data-role="page" id="start" class="type-interior">
+    <div data-role="header">
+        <h1>Home</h1>
+    </div><!-- /header -->
     <ul data-role="listview">
-        <li><a href="#myVotes">My Votings</a></li>
-        <li><a href="#vote">Vote Now!</a></li>
-        <li><a href="#teamResults">Team Results</a></li>
-        <li><a href="questionsList.html">Questionaire</a></li>
+        <li><a href="#myVotes" data-transition="slide">My Votings</a></li>
+        <li><a href="#vote" data-transition="slide">Vote Now!</a></li>
+        <li><a href="#teamResults" data-transition="slide">Team Results</a></li>
+        <li><a href="questionsList.html" data-transition="slide">Questionaire</a></li>
+        <li><a href="#playground" data-transition="slide">Playground</a></li>
     </ul>
+    <div><p><a href="#about" data-rel="dialog" data-transition="slideup">About this app</a></p></div>
 </div>
 
+<!-----------------------my Votes----------------------->
 <div data-role="page" id="myVotes" class="type-interior">
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
+        <h1>My Votes</h1>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -48,11 +57,13 @@
     </div>
 </div>
 
+
+<!-----------------------Vote!----------------------->
 <div data-role="page" id="vote" class="type-interior">
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
+        <h1>Vote!</h1>
     </div><!-- /header -->
-
     <div data-role="content">
         <label for="textarea-a">Question 1:</label>
 
@@ -60,20 +71,23 @@
             Does your boss walk the talk?
         </textarea>
 
-        <label for="slider-1">Input slider:</label>
         <input type="range" name="slider-1" id="slider-1" value="5" min="0" max="10" />
         <label>1 - trifft &uuml;berhaupt nicht zu</label>
         <label>10 - trifft vollkommen zu</label>
     </div>
 
     <div data-role="footer">
+        <button onclick="save()">Back</button>
         <button onclick="save()">Save</button>
+        <button onclick="save()">Next</button>
     </div>
 </div>
 
+<!-----------------------Results----------------------->
 <div data-role="page" id="teamResults" class="type-interior">
     <div data-role="header">
         <a href="#start">Zur&uuml;ck</a>
+        <h1>Results</h1>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -90,26 +104,76 @@
     </div>
 </div>
 
+<!-----------------------Playground----------------------->
+<div data-role="page" id="playground">
 
-<!-- /footer -->
-<!-- <div data-role="header" data-theme="f">
-    <h1>Basic list</h1>
-    <a href="../../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
-    <a href="../nav.html" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade">Search</a>
-</div>&lt;!&ndash; /header &ndash;&gt;
+    <div data-role="header">
+        <a href="#start">Zur&uuml;ck</a>
+        <h1>Home</h1>
+    </div>
 
     <div data-role="content">
-        <ul data-role="listview" data-inset="true" data-filter="true">
-            <li><a href="#">Acura</a></li>
-            <li><a href="#">Audi</a></li>
-            <li><a href="#">BMW</a></li>
-            <li><a href="#">Cadillac</a></li>
-            <li><a href="#">Ferrari</a></li>
-        </ul>
-    </div>&lt;!&ndash;!-- /content -->
+        <!-----------------------Collapsable element----------------------->
+        <div data-role="collapsible" data-state="collapsed">
+            <h3>Collapsable</h3>
+            <p>This app rocks!</p>
+        </div>
 
-<!-- /page -->
+        <!-----------------------A Form element----------------------->
+        <form action="#" method="get">
 
+            <div data-role="fieldcontain">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name" value=""  />
+            </div>
+
+            <div data-role="controlgroup">
+                <legend>Which flavour(s) would you like?</legend>
+
+                <input type="checkbox" name="vanilla" id="vanilla" class="custom" />
+                <label for="vanilla">Vanilla</label>
+
+                <input type="checkbox" name="chocolate" id="chocolate" class="custom" />
+                <label for="chocolate">Chocolate</label>
+
+                <input type="checkbox" name="strawberry" id="strawberry" class="custom" />
+                <label for="strawberry">Strawberry</label>
+
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="quantity">Number of Cones:</label>
+                <input type="range" name="quantity" id="quantity" value="1" min="1" max="10"  />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="sprinkles">Sprinkles:</label>
+                <select name="sprinkles" id="sprinkles" data-role="slider">
+                    <option value="off">No</option>
+                    <option value="on">Yes</option>
+                </select>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="store">Collect from Store:</label>
+                <select name="store" id="store">
+                    <option value="mainStreet">Main Street</option>
+                    <option value="libertyAvenue">Liberty Avenue</option>
+                    <option value="circleSquare">Circle Square</option>
+                    <option value="angelRoad">Angel Road</option>
+                </select>
+            </div>
+
+            <div class="ui-body ui-body-b">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><button type="submit" data-theme="d">Cancel</button></div>
+                    <div class="ui-block-b"><button type="submit" data-theme="a">Order Ice Cream</button></div>
+                </fieldset>
+            </div>
+
+    </div>
+
+</div>
 
 </body>
 
