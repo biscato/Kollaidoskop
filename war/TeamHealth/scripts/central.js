@@ -1,7 +1,7 @@
 var biscatoQuestions = new Array();
 var biscatoHeader = "votingHeader";
 
-$('#questions').live('pagebeforecreate',function(event, ui){
+$('#vote').live('pagebeforecreate',function(event, ui){
     $.ajax(
         {
             type: "GET",
@@ -28,21 +28,31 @@ function initDataForPage(){
 }
 
 function setHeader(headerDOMElement){
-    var html = "Question 1 of 15";
+    var html = "Question 1 of 15";    //TODO: localize text
     $(html).appendTo($("#votingHeader"));
 }
 
 function displayAllQuestions(targetDOMElement){
 
     var html = "";
-    for(var i=0; i < biscatoQuestions.length; i++){
-        html += "<div>Question#: "+i+"</div>";
-        html += "<div>Question: " + biscatoQuestions[i].description + "</div>";
-        html += "<div>Category: " + biscatoQuestions[i].category + "</div>";
-        html += "<div>------------------</div>";
-        $(html).appendTo($("#JSON"));
-    }
+    var sliderMinValue = 0;
+    var sliderMaxValue = 10;
+    var sliderStartValue = 5;
+    var questionsCounter = 0;
 
+    $('.ui-slider-handle').height(100);
+
+    for(var i=0; i < biscatoQuestions.length; i++){
+        questionsCounter++;
+        html += "<div>Question # "+questionsCounter+ ": </div>"; //TODO: localize text
+        html += "<div><label>" + biscatoQuestions[i].description + "</label></div>"; //TODO: localize text
+        html += "<div data-role='fieldcontain'>";
+        html += "<input class='biscatoQuestionSlider' type='range' name='slider-" + i + "' id='slider-" + i + "' value='" + sliderStartValue + "' min='" + sliderMinValue + "' max='" + sliderMaxValue + "' />";
+        html += "<label for='slider-" + i + "'>Value:</label>"; //TODO: localize text
+        html += "</div>";
+        html += "<br>";
+    }
+    $(html).appendTo($("#voting"));
 }
 
 function getQuestions(){

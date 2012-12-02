@@ -22,10 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="30" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-27.5">
+            <state line="24" column="85" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.42056075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="team-health.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/team-health.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="27" selection-start="1173" selection-end="1194" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,10 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="central.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="central.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/central.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="62" selection-start="322" selection-end="322" vertical-scroll-proportion="0.1534091">
+            <state line="54" column="48" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.mobile-1.2.0.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.2.0.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2321" column="7" selection-start="108917" selection-end="108917" vertical-scroll-proportion="-23.115385">
               <folding />
             </state>
           </provider>
@@ -72,8 +90,10 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/questionsList.html" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/jquery.mobile-1.2.0.css" />
+        <option value="$PROJECT_DIR$/css/team-health.css" />
         <option value="$PROJECT_DIR$/scripts/central.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -138,6 +158,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamHealth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamHealth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,13 +348,6 @@
         <state line="5496" column="54" selection-start="240052" selection-end="240060" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="748" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/questionsList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="573" selection-end="969" vertical-scroll-proportion="-8.75">
@@ -328,16 +355,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="30" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-27.5">
+        <state line="0" column="0" selection-start="0" selection-end="748" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.2.0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2321" column="7" selection-start="108917" selection-end="108917" vertical-scroll-proportion="-23.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/team-health.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="27" selection-start="1173" selection-end="1194" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/central.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="322" selection-end="322" vertical-scroll-proportion="0.1534091">
+        <state line="54" column="48" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="85" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.42056075">
           <folding />
         </state>
       </provider>
