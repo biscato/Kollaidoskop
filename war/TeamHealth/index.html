@@ -11,10 +11,12 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon114x114.jpeg" />
 
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
-    <link rel="stylesheet" type="text/css" href="css/team-health.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/team-health.css" />-->
+    <link rel="stylesheet" type="text/css" href="libs/dist/jquery.jqplot.css" />
 
     <script type="text/javascript" src="libs/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="libs/jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" src="libs/dist/jquery.jqplot.js"></script>
     <script type="text/javascript" src="scripts/central.js"></script>
 </head>
 
@@ -28,55 +30,15 @@
     </div>
 
     <ul data-role="listview">
-        <li><a href="#myVotes" data-transition="slide">My Votings</a></li>
         <li><a href="#vote" data-transition="slide">Vote Now!</a></li>
+        <li><a href="#myVotes" data-transition="slide">My Votings</a></li>
         <li><a href="#teamResults" data-transition="slide">Team Results</a></li>
-        <li><a href="#questions" data-transition="slide">Questionaire</a></li>
-        <!--<li><a href="questionsList.html" data-transition="slide">Questionaire</a></li>-->
         <li><a href="#playground" data-transition="slide">Playground</a></li>
     </ul>
 
     <div><p><a href="#about" data-rel="dialog" data-transition="slideup">About this app</a></p></div>
 
 </div>
-
-<div data-role="page" id="questions" class="type-interior">
-    <div data-role="header">
-        <a href="#start">Zur&uuml;ck</a>
-        <h1 id="votingHeader"></h1>
-    </div><!-- /header -->
-
-    <br>
-    <div data-role="content">
-        <div><label>Was kommt als JSON vom Server?</label></div>
-        <div id="JSON"></div>
-    </div>
-</div>
-
-
-<!-----------------------my Votes----------------------->
-<div data-role="page" id="myVotes" class="type-interior">
-
-    <div data-role="header">
-        <a href="#start">Zur&uuml;ck</a>
-        <h1>My Votes</h1>
-    </div>
-
-    <div data-role="content">
-        <label for="textarea-a">Frage 1:</label>
-        <textarea name="textarea" id="textarea-a">
-            Does your boss walk the talk?
-        </textarea>
-        <label>Abgestimmt mit: 7</label>
-        <label for="textarea-a">Frage 2:</label>
-        <textarea name="textarea" id="textarea-3">
-            Werden vereinbarte Ziele verfolgt?
-        </textarea>
-        <label>Abgestimmt mit: 6</label>
-    </div>
-
-</div>
-
 
 <!-----------------------Vote!----------------------->
 <div data-role="page" id="vote" class="type-interior">
@@ -96,7 +58,25 @@
 
 </div>
 
-<!-----------------------Results----------------------->
+<!-----------------------my Votes Results----------------------->
+<div data-role="page" id="myVotes">
+
+    <div data-role="header" data-position="fixed">
+        <a href="#start">Zur&uuml;ck</a>
+        <h1>My Votes</h1>
+    </div>
+
+    <div data-role="content">
+        <div id="myVotesChart" style="width: 600px; height: 350px;"></div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>test</h4>
+    </div>
+
+</div>
+
+<!-----------------------Team Results----------------------->
 <div data-role="page" id="teamResults" class="type-interior">
 
     <div data-role="header">
@@ -105,17 +85,9 @@
     </div>
 
     <div data-role="content">
-        <label for="textarea-a">Frage 1:</label>
-        <textarea name="textarea" id="textarea-5">
-            Does your boss walk the talk?
-        </textarea>
-        <label>Abgestimmt mit: 8,95</label>
-        <label for="textarea-a">Frage 2:</label>
-        <textarea name="textarea" id="textarea-6">
-            Werden vereinbarte Ziele verfolgt?
-        </textarea>
-        <label>Abgestimmt mit: 6,44</label>
+        <div id="teamResultsChart" style="width: 600px; height: 350px;"></div>
     </div>
+
 
 </div>
 

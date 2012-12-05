@@ -41,7 +41,7 @@
   	</servlet>  
   	<servlet-mapping>
     	<servlet-name>RESTService</servlet-name>
-    	<url-pattern>/*</url-pattern>
+    	<url-pattern>/teamhealth/*</url-pattern>
   	</servlet-mapping>
   
   

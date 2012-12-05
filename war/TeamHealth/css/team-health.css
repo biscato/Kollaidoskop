@@ -47,6 +47,6 @@ q:before, q:after {
 /******************************/
 
 input.biscatoQuestionSlider{
-    width:100%;
-    height:30px;
+    width:80%;
+    /*height:50px;*/
 }
