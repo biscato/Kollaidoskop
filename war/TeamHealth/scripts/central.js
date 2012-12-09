@@ -1,17 +1,29 @@
 var biscatoQuestions = new Array();
 var biscatoHeader = "votingHeader";
+var biscatoProtocol;
+var biscatoHost;
+var biscatoPort;
+var biscatoTeamHealthURL = "/teamhealth/questionaire";
 
 $('#vote').live('pagebeforecreate',function(event, ui){
+	
+	biscatoProtocol = window.location.protocol;
+	biscatoHost = window.location.hostname;
+	biscatoPort = window.location.port;
+	
+	var biscatoQuestionaireURL = biscatoProtocol + "//" + biscatoHost + ":" + biscatoPort + biscatoTeamHealthURL;
+	
     $.ajax(
         {
             type: "GET",
-            url:  'http://192.168.0.114:8888/teamhealth/questionaire',
+            url: biscatoQuestionaireURL,
+            //            url:  'http://192.168.0.114:8888/teamhealth/questionaire',
             //url:  'http://localhost:8888/questionaire',
             data: "{}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                biscatoQuestions = data.questionaire;
+                biscatoQuestions = data.question;
                 initDataForPage();
             },
             error: function (msg, url, line) {

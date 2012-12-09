@@ -30,6 +30,7 @@ public class QuestionaireResource {
 	@Path("{id}")
 	public Question getQuestionForId(@PathParam("id") long id) {
 		QuestionDAO questionDAO = new QuestionDAO();
+		//TODO: Error handling: a) wrong id b) no id (e.g. character instead of int) c) other error
 		return questionDAO.getEntityForId(id);
 	}
 
@@ -38,6 +39,7 @@ public class QuestionaireResource {
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Question createQuestion(Question newQuestion)	 {
 		QuestionDAO questionDAO = new QuestionDAO();
+		//TODO: Error handling when wrong data is supplied or information is missing
 		return questionDAO.createEntity(newQuestion);
 	}
 	

@@ -18,23 +18,27 @@ public class Question {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
 	private String language;
-	private String description;
+	private String questionText;
 	private String category;
+	private boolean active;
 	
 	public Question(){
 		super();
+		this.active = true;
 	}
 	
 	public Question(String description) {
 		super();
-		this.description = description;
+		this.questionText = description;
+		this.active = true;
 	}	
 	
 	public Question(String language, String description, String category) {
 		super();
 		this.language = language;
-		this.description = description;
+		this.questionText = description;
 		this.category = category;
+		this.active = true;
 	}
 	public String getLanguage() {
 		return language;
@@ -45,11 +49,11 @@ public class Question {
 	}
 
 	public String getDescription() {
-		return description;
+		return questionText;
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.questionText = description;
 	}
 
 	public String getCategory() {
@@ -66,6 +70,14 @@ public class Question {
 			return this.key.getId();
 		else 
 			return -1;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 }

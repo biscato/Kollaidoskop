@@ -12,6 +12,18 @@ import com.biscato.kollaidoskop.model.Question;
 public class QuestionDAO implements EntityDAO<Question> {
 
 	@Override
+	public List<Question> createAllEntities(List<Question> entities) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteAllEntities() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
 	public Question createEntity(Question entity) {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Question newEntity;
