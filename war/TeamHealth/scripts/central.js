@@ -63,9 +63,21 @@ function getQuestions(){
 
 $('#myVotes').live('pageshow',function(event, ui){
 
-    $.jqplot('myVotesChart',  [[[7,5],[8, 4],[9, 5],[10,7],[11,7],[12,8]]],
-        { title:'My Votes',
-            axes:{yaxis:{min:0, max:10}},
+    var dummyData = [['4',5],['5', 4],['6', 5],['7',7],['8',7],['9',8]];
+
+    $.jqplot('myVotesChart', [dummyData],
+        {
+//            axesDefaults: {ticks: [0,2,4,6,8,10]},
+//            axesDefaults: {ticks: [[2, 0],[4, 2],[6, 4],[5, 6],[8, 8]]},
+            axes:{
+                xaxis: {
+//                    borderColor: "#222",
+                    renderer: $.jqplot.DateAxisRenderer,
+                    numberTicks:6,
+                    tickOptions:{formatString:'%b'},
+                    rendererOptions:{tickRenderer: $.jqplot.CanvasAxisTickRenderer}
+                },
+                yaxis:{min:0, max:10}},
             series:[{color:'#5FAB78'}]
         });
 });

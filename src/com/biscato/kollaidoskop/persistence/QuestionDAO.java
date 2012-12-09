@@ -7,14 +7,14 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-import com.biscato.kollaidoskop.model.Questionaire;
+import com.biscato.kollaidoskop.model.Question;
 
-public class QuestionaireDAO implements EntityDAO<Questionaire> {
+public class QuestionDAO implements EntityDAO<Question> {
 
 	@Override
-	public Questionaire createEntity(Questionaire entity) {
+	public Question createEntity(Question entity) {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		Questionaire newEntity;
+		Question newEntity;
 
 		try {
 			newEntity = pm.makePersistent(entity);
@@ -25,28 +25,28 @@ public class QuestionaireDAO implements EntityDAO<Questionaire> {
 	}
 
 	@Override
-	public boolean deleteEntity(Questionaire entity) {
+	public boolean deleteEntity(Question entity) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Questionaire updateEntity(Questionaire entity) {
+	public Question updateEntity(Question entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Questionaire getEntityForId(long id) {
+	public Question getEntityForId(long id) {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		return (Questionaire) pm.getObjectById(Questionaire.class, id);		
+		return (Question) pm.getObjectById(Question.class, id);		
 	}
 
 	@Override
-	public List<Questionaire> getAllEntities() {
+	public List<Question> getAllEntities() {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		Query query = pm.newQuery(Questionaire.class);
-		Collection<Questionaire> myCol = (Collection<Questionaire>) query.execute();
-		return new ArrayList<Questionaire>(myCol);
+		Query query = pm.newQuery(Question.class);
+		Collection<Question> myCol = (Collection<Question>) query.execute();
+		return new ArrayList<Question>(myCol);
 	}
 }

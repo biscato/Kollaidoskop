@@ -9,9 +9,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.google.appengine.api.datastore.Key;
 
+
 @XmlRootElement
 @PersistenceCapable
-public class Questionaire {
+public class Question {
 	
 	@PrimaryKey //Annotation for jersey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
@@ -20,16 +21,16 @@ public class Questionaire {
 	private String description;
 	private String category;
 	
-	public Questionaire(){
+	public Question(){
 		super();
 	}
 	
-	public Questionaire(String description) {
+	public Question(String description) {
 		super();
 		this.description = description;
 	}	
 	
-	public Questionaire(String language, String description, String category) {
+	public Question(String language, String description, String category) {
 		super();
 		this.language = language;
 		this.description = description;
@@ -66,4 +67,5 @@ public class Questionaire {
 		else 
 			return -1;
 	}
+	
 }

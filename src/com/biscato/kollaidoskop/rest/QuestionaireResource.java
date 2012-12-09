@@ -11,8 +11,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.biscato.kollaidoskop.model.Questionaire;
-import com.biscato.kollaidoskop.persistence.QuestionaireDAO;
+import com.biscato.kollaidoskop.model.Question;
+import com.biscato.kollaidoskop.persistence.QuestionDAO;
 
 
 @Path("/questionaire")
@@ -20,98 +20,96 @@ public class QuestionaireResource {
 	
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
-	public List<Questionaire> getAllQuestionaire() {
-		QuestionaireDAO questionaireDAO = new QuestionaireDAO();
-		
+	public List<Question> getAllQuestionaire() {
+		QuestionDAO questionDAO = new QuestionDAO();
 // 		return questionaireDAO.getAllEntities();
-		return new ArrayList<Questionaire>(createTestQuestions());
-		
+		return new ArrayList<Question>(createTestQuestions());	
 	}
 
 	@GET
 	@Path("{id}")
-	public Questionaire getQuestionaireForId(@PathParam("id") long id) {
-		QuestionaireDAO questionaireDAO = new QuestionaireDAO();
-		return questionaireDAO.getEntityForId(id);
+	public Question getQuestionForId(@PathParam("id") long id) {
+		QuestionDAO questionDAO = new QuestionDAO();
+		return questionDAO.getEntityForId(id);
 	}
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Questionaire createQuestionaire(Questionaire newQuestionaire)	 {
-		QuestionaireDAO questionaireDAO = new QuestionaireDAO();
-		return questionaireDAO.createEntity(newQuestionaire);
+	public Question createQuestion(Question newQuestion)	 {
+		QuestionDAO questionDAO = new QuestionDAO();
+		return questionDAO.createEntity(newQuestion);
 	}
 	
-	private List<Questionaire> createTestQuestions(){
+	private List<Question> createTestQuestions(){
 
-		final String german = new String("de");
+		final String german = new String("de"); //TODO: get locale from device
 		//final String english = new String("en");
 		final String categoryVisionDe = new String("Vision");
 		final String categoryInnovationDe = new String("Unterstützung von Innvovation");
 		final String categoryTaskorientationDe = new String("Aufgabenorientierung");
 		final String categorySecurityDe = new String("Partizipative Sicherheit");
 		
-		ArrayList<Questionaire> list = new ArrayList<Questionaire>();
+		ArrayList<Question> list = new ArrayList<Question>();
 				
 		//1
-		Questionaire newEntry = new Questionaire(german, "In diesem Team ist allen klar, was wir erreichen wollen.", categoryVisionDe);
+		Question newEntry = new Question(german, "In diesem Team ist allen klar, was wir erreichen wollen.", categoryVisionDe);
 		list.add(newEntry);
 		newEntry = null;
 		//2
-		newEntry = new Questionaire(german, "Wir wissen, dass wir uns aufeinander verlassen können.", categoryInnovationDe);
+		newEntry = new Question(german, "Wir wissen, dass wir uns aufeinander verlassen können.", categoryInnovationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//3
-		newEntry = new Questionaire(german, "Wir haben anregende Diskussionen darüber, wie wir am besten arbeiten.", categoryTaskorientationDe);
+		newEntry = new Question(german, "Wir haben anregende Diskussionen darüber, wie wir am besten arbeiten.", categoryTaskorientationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//4
-		newEntry = new Questionaire(german, "Wir treffen uns ausreichend häufig, um effektiv zu kommunizieren und zu koordinieren.", categorySecurityDe);
+		newEntry = new Question(german, "Wir treffen uns ausreichend häufig, um effektiv zu kommunizieren und zu koordinieren.", categorySecurityDe);
 		list.add(newEntry);
 		newEntry = null;
 		//5
-		newEntry = new Questionaire(german, "Die Teammitglieder bieten einander immer schnell Hilfe an, um etwas Neues auszuprobieren.", categoryInnovationDe);
+		newEntry = new Question(german, "Die Teammitglieder bieten einander immer schnell Hilfe an, um etwas Neues auszuprobieren.", categoryInnovationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//6
-		newEntry = new Questionaire(german, "Wir haben alle Einfluss auf endgültige Entscheidungen im Team.", categorySecurityDe);
+		newEntry = new Question(german, "Wir haben alle Einfluss auf endgültige Entscheidungen im Team.", categorySecurityDe);
 		list.add(newEntry);
 		newEntry = null;
 		//7
-		newEntry = new Questionaire(german, "Wir halten uns über arbeitsrelevante Dinge gegenseitig auf dem Laufenden.", categorySecurityDe);
+		newEntry = new Question(german, "Wir halten uns über arbeitsrelevante Dinge gegenseitig auf dem Laufenden.", categorySecurityDe);
 		list.add(newEntry);
 		newEntry = null;
 		//8
-		newEntry = new Questionaire(german, "In unserem Team herrscht ein Gefühl von Sicherheit und Vertrauen.", categorySecurityDe);
+		newEntry = new Question(german, "In unserem Team herrscht ein Gefühl von Sicherheit und Vertrauen.", categorySecurityDe);
 		list.add(newEntry);
 		newEntry = null;
 		//9
-		newEntry = new Questionaire(german, "Wir sind jederzeit aufgeschlossen gegenüber neuen Ideen.", categoryInnovationDe);
+		newEntry = new Question(german, "Wir sind jederzeit aufgeschlossen gegenüber neuen Ideen.", categoryInnovationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//10
-		newEntry = new Questionaire(german, "Alle Teammitglieder fühlen sich den Zielen des Teams verpflichtet.", categoryVisionDe);
+		newEntry = new Question(german, "Alle Teammitglieder fühlen sich den Zielen des Teams verpflichtet.", categoryVisionDe);
 		list.add(newEntry);
 		newEntry = null;
 		//11
-		newEntry = new Questionaire(german, "Wir können offen über Fehler sprechen.", categoryTaskorientationDe);
+		newEntry = new Question(german, "Wir können offen über Fehler sprechen.", categoryTaskorientationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//12
-		newEntry = new Questionaire(german, "Wir stimmen mit unsere Ziele überein.", categoryVisionDe);
+		newEntry = new Question(german, "Wir stimmen mit unsere Ziele überein.", categoryVisionDe);
 		list.add(newEntry);
 		newEntry = null;
 		//13
-		newEntry = new Questionaire(german, "Es herrscht bei uns eine Atmosphäre, in der konstruktive Kritik geübt wird.", categoryTaskorientationDe);
+		newEntry = new Question(german, "Es herrscht bei uns eine Atmosphäre, in der konstruktive Kritik geübt wird.", categoryTaskorientationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//14
-		newEntry = new Questionaire(german, "Wir unterstützen einander in Ideen ¸ber neue und verbesserte Arbeitsprozesse.", categoryInnovationDe);
+		newEntry = new Question(german, "Wir unterstützen einander in Ideen ¸ber neue und verbesserte Arbeitsprozesse.", categoryInnovationDe);
 		list.add(newEntry);
 		newEntry = null;
 		//15
-		newEntry = new Questionaire(german, "Wir unterstützen uns gegenseitig bei der Erledigung unserer Aufgabe.", categoryTaskorientationDe);
+		newEntry = new Question(german, "Wir unterstützen uns gegenseitig bei der Erledigung unserer Aufgabe.", categoryTaskorientationDe);
 		list.add(newEntry);
 		newEntry = null;
 
