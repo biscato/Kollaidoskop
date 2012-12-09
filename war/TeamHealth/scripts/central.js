@@ -17,8 +17,6 @@ $('#vote').live('pagebeforecreate',function(event, ui){
         {
             type: "GET",
             url: biscatoQuestionaireURL,
-            //            url:  'http://192.168.0.114:8888/teamhealth/questionaire',
-            //url:  'http://localhost:8888/questionaire',
             data: "{}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
