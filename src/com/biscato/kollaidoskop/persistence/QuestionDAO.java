@@ -7,20 +7,42 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
+import com.biscato.kollaidoskop.model.Answer;
 import com.biscato.kollaidoskop.model.Question;
 
 public class QuestionDAO implements EntityDAO<Question> {
 
 	@Override
 	public List<Question> createAllEntities(List<Question> entities) {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<Question> newEntities;
+		List createdQuestions;
+		
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		Collection<Question> collection = new ArrayList<Question>(entities);
+		
+		try{
+			newEntities = pm.makePersistentAll(collection);
+		}
+		finally{
+			pm.close();
+		}
+		createdQuestions = new ArrayList(newEntities);
+		return createdQuestions;
 	}
 
 	@Override
 	public boolean deleteAllEntities() {
-		// TODO Auto-generated method stub
-		return false;
+		//TODO: Error handling delete all questioNDAO
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		try{
+			Query query = pm.newQuery(Question.class);
+			Collection<Question> myCol = (Collection<Question>) query.execute();
+			pm.deletePersistentAll(myCol);
+		}
+		finally{
+			pm.close();
+		}
+		return true;
 	}
 
 	@Override

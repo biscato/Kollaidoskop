@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -12,6 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.biscato.kollaidoskop.model.Question;
+import com.biscato.kollaidoskop.persistence.AnswerDAO;
 import com.biscato.kollaidoskop.persistence.QuestionDAO;
 
 
@@ -21,9 +23,9 @@ public class QuestionaireResource {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public List<Question> getAllQuestionaire() {
-//		QuestionDAO questionDAO = new QuestionDAO();
-// 		return questionaireDAO.getAllEntities();
-		return new ArrayList<Question>(createTestQuestions());	
+		QuestionDAO questionDAO = new QuestionDAO();
+ 		return questionDAO.getAllEntities();
+//		return new ArrayList<Question>(createTestQuestions());	
 	}
 
 	@GET
@@ -46,6 +48,13 @@ public class QuestionaireResource {
 			list.add(questionDAO.createEntity(quest));
 		}
 		return list;
+	}
+	
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void deleteAllQuestions(){
+		QuestionDAO question = new QuestionDAO();
+		question.deleteAllEntities();
 	}
 	
 	private List<Question> createTestQuestions(){
