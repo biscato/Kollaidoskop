@@ -1,6 +1,7 @@
 package com.biscato.kollaidoskop.model;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
@@ -8,7 +9,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
+import javax.xml.bind.annotation.XmlSchemaType;
 import com.google.appengine.api.datastore.Key;
 
 
@@ -19,7 +20,7 @@ public class Answer {
 	@PrimaryKey //Annotation for jersey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
-	private Timestamp creationTimestamp;
+	private long creationTimestamp; //TODO: implement a real timestamp
 	private String user;
 	private int rating;
 	private long questionId;
@@ -38,10 +39,10 @@ public class Answer {
 			return -1;
 	}
 	
-	public Timestamp getCreationTimestamp() {
+	public long getCreationTimestamp() {
 		return creationTimestamp;
 	}
-	public void setCreationTimestamp(Timestamp creationTimestamp) {
+	public void setCreationTimestamp(long creationTimestamp) {
 		this.creationTimestamp = creationTimestamp;
 	}
 	public String getUser() {

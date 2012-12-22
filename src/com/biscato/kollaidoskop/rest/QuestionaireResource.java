@@ -21,7 +21,7 @@ public class QuestionaireResource {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public List<Question> getAllQuestionaire() {
-		QuestionDAO questionDAO = new QuestionDAO();
+//		QuestionDAO questionDAO = new QuestionDAO();
 // 		return questionaireDAO.getAllEntities();
 		return new ArrayList<Question>(createTestQuestions());	
 	}
@@ -37,10 +37,15 @@ public class QuestionaireResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Question createQuestion(Question newQuestion)	 {
+	public List<Question> createQuestion(List<Question> newQuestions)	 {
 		QuestionDAO questionDAO = new QuestionDAO();
 		//TODO: Error handling when wrong data is supplied or information is missing
-		return questionDAO.createEntity(newQuestion);
+		
+		ArrayList<Question> list = new ArrayList<Question>();
+		for(Question quest : newQuestions){
+			list.add(questionDAO.createEntity(quest));
+		}
+		return list;
 	}
 	
 	private List<Question> createTestQuestions(){

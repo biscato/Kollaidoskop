@@ -48,8 +48,16 @@ public class AnswerDAO implements EntityDAO<Answer>{
 
 	@Override
 	public boolean deleteAllEntities() {
-		// TODO Auto-generated method stub
-		return false;
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		try{
+			Query query = pm.newQuery(Answer.class);
+			Collection<Answer> myCol = (Collection<Answer>) query.execute();
+			pm.deletePersistentAll(myCol);
+		}
+		finally{
+			pm.close();
+		}
+		return true;
 	}
 
 	@Override
