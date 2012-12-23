@@ -34,6 +34,7 @@ public class AnswerResource {
 	
 	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
+	//TODO: return boolean for success or failure
 	public void deleteAllVotes(){
 		AnswerDAO answer = new AnswerDAO();
 		answer.deleteAllEntities();

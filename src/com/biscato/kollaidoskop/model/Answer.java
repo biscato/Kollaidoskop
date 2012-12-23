@@ -26,6 +26,7 @@ public class Answer {
 	private long questionId;
 	private String questionText;
 	private String questionCategory;
+	private int questionCategoryId;
 	
 	public Answer(){
 		super();
@@ -75,5 +76,10 @@ public class Answer {
 	public void setQuestionCategory(String questionCategory) {
 		this.questionCategory = questionCategory;
 	}
-	
+	public int getQuestionCategoryId() {
+		return questionCategoryId;
+	}
+	public void setQuestionCategoryId(int questionCategoryId) {
+		this.questionCategoryId = questionCategoryId;
+	}
 }

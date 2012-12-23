@@ -21,6 +21,7 @@ public class Question {
 	private String questionText;
 	private String category;
 	private boolean active;
+	private int categoryId;
 	
 	public Question(){
 		super();
@@ -33,11 +34,12 @@ public class Question {
 		this.active = true;
 	}	
 	
-	public Question(String language, String description, String category) {
+	public Question(String language, String description, String category, int categoryId) {
 		super();
 		this.language = language;
 		this.questionText = description;
 		this.category = category;
+		this.categoryId = categoryId;
 		this.active = true;
 	}
 	public String getLanguage() {
@@ -78,6 +80,14 @@ public class Question {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
 	
 }
