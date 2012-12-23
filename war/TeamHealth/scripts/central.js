@@ -211,6 +211,10 @@ function displayTeamResults(data){
         // the legend to overflow the container.
         legend: {
             show: true,
+            location: 's', //ne, e
+//            rendererOptions:{numberColumns: 2},
+//            xoffset:55,
+//            yoffset:-100
             placement: 'outsideGrid'
         },
         axes: {
