@@ -85,5 +85,20 @@ public class AnswerDAO implements EntityDAO<Answer>{
 		Collection<Answer> myCol = (Collection<Answer>) query.execute();
 		return new ArrayList<Answer>(myCol);
 	}
-
+	
+	public List<Answer> getEntitiesForTimeframe(long from, long to) {
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		String filter = "(creationTimestamp >= " + from + " && creationTimestamp <= " + to + ")";
+		Query query = pm.newQuery(Answer.class, filter);
+		Collection<Answer> myCol = (Collection<Answer>) query.execute();
+		return new ArrayList<Answer>(myCol);
+	}
+	
+	public List<Answer> getEntitiesForTimeframeAndTeam(long from, long to, int teamId) {
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		String filter = "(teamId == " + teamId + ") && (creationTimestamp >= " + from + " && creationTimestamp <= " + to + ")";
+		Query query = pm.newQuery(Answer.class, filter);
+		Collection<Answer> myCol = (Collection<Answer>) query.execute();
+		return new ArrayList<Answer>(myCol);
+	}
 }

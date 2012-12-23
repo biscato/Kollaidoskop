@@ -16,13 +16,14 @@ public class TeamResult {
 	private float structure;
 	private float virtualCompetence;
 	
+	//TODO: delete this code once we have the specific time and team retrieval
 	public TeamResult(){
 		super();
 		initFloats();
 		gatherData();
 	}
 	
-	public TeamResult(long from, long to, String team){
+	public TeamResult(long from, long to, int team){
 		super();
 		initFloats();
 		gatherData(from, to, team);
@@ -38,11 +39,22 @@ public class TeamResult {
 	}
 	
 	private void gatherData(){
-		//get all answers
+//TODO: delete this code once we have the specific time and team retrieval
 		ArrayList<Answer> answers = new ArrayList();
 		AnswerDAO answer = new AnswerDAO();
 		answers = (ArrayList<Answer>) answer.getAllEntities();
-		
+		setAttributesForAnswers(answers);
+	}
+
+
+	private void gatherData(long from, long to, int team){
+		ArrayList<Answer> answers = new ArrayList();
+		AnswerDAO answer = new AnswerDAO();
+		answers = (ArrayList<Answer>) answer.getEntitiesForTimeframe(from, to); //TODO: add them when teamId is added
+		setAttributesForAnswers(answers);
+	}
+	
+	private void setAttributesForAnswers(ArrayList<Answer> answers){
 		int visionCounter = 0;
 		int securityCounter = 0;
 		int taskOrientationCounter = 0;
@@ -93,11 +105,6 @@ public class TeamResult {
 			structure /= structureCounter;
 		if(virtualCompetenceCounter > 0)
 			virtualCompetence /= virtualCompetenceCounter;
-
-	}
-
-	private void gatherData(long from, long to, String team){
-		//TODO: return team results based on timeframe and team
 	}
 
 	public float getVision() {
