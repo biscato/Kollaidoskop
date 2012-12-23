@@ -89,6 +89,7 @@ function getVotesFromUser(){
         answers[i]["questionId"] = biscatoQuestions[i].id;
         answers[i]["questionText"] = biscatoQuestions[i].description;
         answers[i]["questionCategory"] = biscatoQuestions[i].category;
+        answers[i]["questionCategoryId"] = biscatoQuestions[i].categoryId;
         answers[i]["user"] = "janruessel@gmail.com";
         answers[i]["rating"] = document.getElementById(sliderString).value;
 
