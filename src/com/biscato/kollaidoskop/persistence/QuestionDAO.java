@@ -49,7 +49,6 @@ public class QuestionDAO implements EntityDAO<Question> {
 	public Question createEntity(Question entity) {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Question newEntity;
-
 		try {
 			newEntity = pm.makePersistent(entity);
 		} finally {

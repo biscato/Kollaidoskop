@@ -62,7 +62,7 @@ public class QuestionaireResource {
 //		final String german = new String("de"); //TODO: get locale from device
 //		//final String english = new String("en");
 //		final String categoryVisionDe = new String("Vision");
-//		final String categoryInnovationDe = new String("UnterstŸtzung von Innvovation");
+//		final String categoryInnovationDe = new String("Unterstï¿½tzung von Innvovation");
 //		final String categoryTaskorientationDe = new String("Aufgabenorientierung");
 //		final String categorySecurityDe = new String("Partizipative Sicherheit");
 //		
@@ -73,15 +73,15 @@ public class QuestionaireResource {
 //		list.add(newEntry);
 //		newEntry = null;
 //		//2
-//		newEntry = new Question(german, "Wir wissen, dass wir uns aufeinander verlassen kšnnen.", categoryInnovationDe);
+//		newEntry = new Question(german, "Wir wissen, dass wir uns aufeinander verlassen kï¿½nnen.", categoryInnovationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//3
-//		newEntry = new Question(german, "Wir haben anregende Diskussionen darŸber, wie wir am besten arbeiten.", categoryTaskorientationDe);
+//		newEntry = new Question(german, "Wir haben anregende Diskussionen darï¿½ber, wie wir am besten arbeiten.", categoryTaskorientationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//4
-//		newEntry = new Question(german, "Wir treffen uns ausreichend hŠufig, um effektiv zu kommunizieren und zu koordinieren.", categorySecurityDe);
+//		newEntry = new Question(german, "Wir treffen uns ausreichend hï¿½ufig, um effektiv zu kommunizieren und zu koordinieren.", categorySecurityDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//5
@@ -89,43 +89,43 @@ public class QuestionaireResource {
 //		list.add(newEntry);
 //		newEntry = null;
 //		//6
-//		newEntry = new Question(german, "Wir haben alle Einfluss auf endgŸltige Entscheidungen im Team.", categorySecurityDe);
+//		newEntry = new Question(german, "Wir haben alle Einfluss auf endgï¿½ltige Entscheidungen im Team.", categorySecurityDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//7
-//		newEntry = new Question(german, "Wir halten uns Ÿber arbeitsrelevante Dinge gegenseitig auf dem Laufenden.", categorySecurityDe);
+//		newEntry = new Question(german, "Wir halten uns ï¿½ber arbeitsrelevante Dinge gegenseitig auf dem Laufenden.", categorySecurityDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//8
-//		newEntry = new Question(german, "In unserem Team herrscht ein GefŸhl von Sicherheit und Vertrauen.", categorySecurityDe);
+//		newEntry = new Question(german, "In unserem Team herrscht ein Gefï¿½hl von Sicherheit und Vertrauen.", categorySecurityDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//9
-//		newEntry = new Question(german, "Wir sind jederzeit aufgeschlossen gegenŸber neuen Ideen.", categoryInnovationDe);
+//		newEntry = new Question(german, "Wir sind jederzeit aufgeschlossen gegenï¿½ber neuen Ideen.", categoryInnovationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//10
-//		newEntry = new Question(german, "Alle Teammitglieder fŸhlen sich den Zielen des Teams verpflichtet.", categoryVisionDe);
+//		newEntry = new Question(german, "Alle Teammitglieder fï¿½hlen sich den Zielen des Teams verpflichtet.", categoryVisionDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//11
-//		newEntry = new Question(german, "Wir kšnnen offen Ÿber Fehler sprechen.", categoryTaskorientationDe);
+//		newEntry = new Question(german, "Wir kï¿½nnen offen ï¿½ber Fehler sprechen.", categoryTaskorientationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//12
-//		newEntry = new Question(german, "Wir stimmen mit unsere Ziele Ÿberein.", categoryVisionDe);
+//		newEntry = new Question(german, "Wir stimmen mit unsere Ziele ï¿½berein.", categoryVisionDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//13
-//		newEntry = new Question(german, "Es herrscht bei uns eine AtmosphŠre, in der konstruktive Kritik geŸbt wird.", categoryTaskorientationDe);
+//		newEntry = new Question(german, "Es herrscht bei uns eine Atmosphï¿½re, in der konstruktive Kritik geï¿½bt wird.", categoryTaskorientationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//14
-//		newEntry = new Question(german, "Wir unterstŸtzen einander in Ideen über neue und verbesserte Arbeitsprozesse.", categoryInnovationDe);
+//		newEntry = new Question(german, "Wir unterstï¿½tzen einander in Ideen ï¿½ber neue und verbesserte Arbeitsprozesse.", categoryInnovationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //		//15
-//		newEntry = new Question(german, "Wir unterstŸtzen uns gegenseitig bei der Erledigung unserer Aufgabe.", categoryTaskorientationDe);
+//		newEntry = new Question(german, "Wir unterstï¿½tzen uns gegenseitig bei der Erledigung unserer Aufgabe.", categoryTaskorientationDe);
 //		list.add(newEntry);
 //		newEntry = null;
 //
@@ -135,49 +135,49 @@ public class QuestionaireResource {
 ////        Entity question16 = new Entity("Question", questionairKey);
 ////        question16.setProperty("Language", "de");
 ////        question16.setProperty("Question ID", "16");
-////        question16.setProperty("Question", "Jeder im Team trägt zur Entscheidungsfindung bei.");
+////        question16.setProperty("Question", "Jeder im Team trï¿½gt zur Entscheidungsfindung bei.");
 ////        question16.setProperty("Category", "Partizipative Sicherheit");
 ////        datastore.put(question16);
 ////        
 ////        Entity question17 = new Entity("Question", questionairKey);
 ////        question17.setProperty("Language", "de");
 ////        question17.setProperty("Question ID", "17");
-////        question17.setProperty("Question", "Unsere Teamregeln beinhalten auch Erwartungen zum Kommunikations- und Rückmeldeverhalten. (Vereinbarungen)");
+////        question17.setProperty("Question", "Unsere Teamregeln beinhalten auch Erwartungen zum Kommunikations- und Rï¿½ckmeldeverhalten. (Vereinbarungen)");
 ////        question17.setProperty("Category", "Struktur");
 ////        datastore.put(question17);
 ////        
 ////        Entity question18 = new Entity("Question", questionairKey);
 ////        question18.setProperty("Language", "de");
 ////        question18.setProperty("Question ID", "18");
-////        question18.setProperty("Question", "Wir haben durchgängig die richtigen Werkzeuge für effektive Zusammenarbeit verfügbar. (Infrastruktur)");
+////        question18.setProperty("Question", "Wir haben durchgï¿½ngig die richtigen Werkzeuge fï¿½r effektive Zusammenarbeit verfï¿½gbar. (Infrastruktur)");
 ////        question18.setProperty("Category", "Struktur");
 ////        datastore.put(question18);
 ////        
 ////        Entity question19 = new Entity("Question", questionairKey);
 ////        question19.setProperty("Language", "de");
 ////        question19.setProperty("Question ID", "19");
-////        question19.setProperty("Question", "Alle im Team haben ausreichende Kenntnisse für die situativ angemessene Anwendung der bereitgestellten Kooperationswerkzeuge. (Medienkompetenz)");
+////        question19.setProperty("Question", "Alle im Team haben ausreichende Kenntnisse fï¿½r die situativ angemessene Anwendung der bereitgestellten Kooperationswerkzeuge. (Medienkompetenz)");
 ////        question19.setProperty("Category", "Virtuelle Kompetenz");
 ////        datastore.put(question19);
 ////        
 ////        Entity question20 = new Entity("Question", questionairKey);
 ////        question20.setProperty("Language", "de");
 ////        question20.setProperty("Question ID", "20");
-////        question20.setProperty("Question", "Unsere Teambesprechungen finden regelmäßig statt und werden sorgfältig vorbereitet. Inhalte, Ziele und Ablauf sind klar.  (Regeln)");
+////        question20.setProperty("Question", "Unsere Teambesprechungen finden regelmï¿½ï¿½ig statt und werden sorgfï¿½ltig vorbereitet. Inhalte, Ziele und Ablauf sind klar.  (Regeln)");
 ////        question20.setProperty("Category", "Struktur");
 ////        datastore.put(question20);
 ////        
 ////        Entity question21 = new Entity("Question", questionairKey);
 ////        question21.setProperty("Language", "de");
 ////        question21.setProperty("Question ID", "21");
-////        question21.setProperty("Question", "Im Team werden die vorhandenen Kommunikationskanäle gemäß der getroffenen Absprachen  effizient eingesetzt.  (Kommunikation)");
+////        question21.setProperty("Question", "Im Team werden die vorhandenen Kommunikationskanï¿½le gemï¿½ï¿½ der getroffenen Absprachen  effizient eingesetzt.  (Kommunikation)");
 ////        question21.setProperty("Category", "Virtuelle Kompetenz");
 ////        datastore.put(question21);
 ////        
 ////        Entity question22 = new Entity("Question", questionairKey);
 ////        question22.setProperty("Language", "de");
 ////        question22.setProperty("Question ID", "22");
-////        question22.setProperty("Question", "In unserem Team besteht eine angemessene Balance zwischen Autonomie /Flexibilität und Zusammenhalt. (Selbstorganisation)");
+////        question22.setProperty("Question", "In unserem Team besteht eine angemessene Balance zwischen Autonomie /Flexibilitï¿½t und Zusammenhalt. (Selbstorganisation)");
 ////        question22.setProperty("Category", "Virtuelle Kompetenz");
 ////        datastore.put(question22);
 ////        
@@ -191,7 +191,7 @@ public class QuestionaireResource {
 ////        Entity question24 = new Entity("Question", questionairKey);
 ////        question24.setProperty("Language", "de");
 ////        question24.setProperty("Question ID", "24");
-////        question24.setProperty("Question", "Es gibt auch regelmäßig informelle Kontakte zwischen allen Teammitgliedern. (Vertrauen)");
+////        question24.setProperty("Question", "Es gibt auch regelmï¿½ï¿½ig informelle Kontakte zwischen allen Teammitgliedern. (Vertrauen)");
 ////        question24.setProperty("Category", "Virtuelle Kompetenz");
 ////        datastore.put(question24);
 ////        
@@ -324,28 +324,28 @@ public class QuestionaireResource {
 ////        Entity question19b = new Entity("Question", questionairKey);
 ////        question19b.setProperty("Language", "en");
 ////        question19b.setProperty("Question ID", "19");
-////        question19b.setProperty("Question", "Alle im Team haben ausreichenen Kenntnisse für die situativ angemessene Anwendung enr bereitgestellten Kooperationswerkzeuge. (Medienkompetenz)");
+////        question19b.setProperty("Question", "Alle im Team haben ausreichenen Kenntnisse fï¿½r die situativ angemessene Anwendung enr bereitgestellten Kooperationswerkzeuge. (Medienkompetenz)");
 ////        question19b.setProperty("Category", "virtual competence");
 ////        datastore.put(question19b);
 ////        
 ////        Entity question20b = new Entity("Question", questionairKey);
 ////        question20b.setProperty("Language", "en");
 ////        question20b.setProperty("Question ID", "20");
-////        question20b.setProperty("Question", "Unsere Teambesprechungen finenn regelmäßig statt und werenn sorgfältig vorbereitet. Inhalte, Ziele und Ablauf sind klar.  (Regeln)");
+////        question20b.setProperty("Question", "Unsere Teambesprechungen finenn regelmï¿½ï¿½ig statt und werenn sorgfï¿½ltig vorbereitet. Inhalte, Ziele und Ablauf sind klar.  (Regeln)");
 ////        question20b.setProperty("Category", "structure");
 ////        datastore.put(question20b);
 ////        
 ////        Entity question21b = new Entity("Question", questionairKey);
 ////        question21b.setProperty("Language", "en");
 ////        question21b.setProperty("Question ID", "21");
-////        question21b.setProperty("Question", "Im Team werenn die vorhanennen Kommunikationskanäle gemäß enr getroffenen Absprachen  effizient eingesetzt.  (Kommunikation)");
+////        question21b.setProperty("Question", "Im Team werenn die vorhanennen Kommunikationskanï¿½le gemï¿½ï¿½ enr getroffenen Absprachen  effizient eingesetzt.  (Kommunikation)");
 ////        question21b.setProperty("Category", "virtual competence");
 ////        datastore.put(question21b);
 ////        
 ////        Entity question22b = new Entity("Question", questionairKey);
 ////        question22b.setProperty("Language", "en");
 ////        question22b.setProperty("Question ID", "22");
-////        question22b.setProperty("Question", "In unserem Team besteht eine angemessene Balance zwischen Autonomie /Flexibilität und Zusammenhalt. (Selbstorganisation)");
+////        question22b.setProperty("Question", "In unserem Team besteht eine angemessene Balance zwischen Autonomie /Flexibilitï¿½t und Zusammenhalt. (Selbstorganisation)");
 ////        question22b.setProperty("Category", "virtual competence");
 ////        datastore.put(question22b);
 ////        
@@ -359,7 +359,7 @@ public class QuestionaireResource {
 ////        Entity question24b = new Entity("Question", questionairKey);
 ////        question24b.setProperty("Language", "en");
 ////        question24b.setProperty("Question ID", "24");
-////        question24b.setProperty("Question", "Es gibt auch regelmäßig informelle Kontakte zwischen allen Teammitglieenrn. (Vertrauen)");
+////        question24b.setProperty("Question", "Es gibt auch regelmï¿½ï¿½ig informelle Kontakte zwischen allen Teammitglieenrn. (Vertrauen)");
 ////        question24b.setProperty("Category", "virtual competence");
 ////        datastore.put(question24b);
 //	}
