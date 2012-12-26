@@ -23,6 +23,7 @@
     <script type="text/javascript" src="libs/jqplot.categoryAxisRenderer.js" charset="utf-8"></script>
     <script type="text/javascript" src="libs/jqplot.barRenderer.js" charset="utf-8"></script>
     <script type="text/javascript" src="scripts/central.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/textParser.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -31,12 +32,12 @@
 <div data-role="page" id="start" class="type-interior">
 
     <div data-role="header">
-        <h1>Home</h1>
+        <h1><span id="startTitle"></span></h1>
     </div>
 
     <ul data-role="listview">
         <li><a href="#vote" data-transition="slide">Vote Now!</a></li>
-        <li><a href="#myVotes" data-transition="slide">My Votings</a></li>
+        <li><a href="#myVotes" data-transition="slide"><span id="myVotesText"></span></a></li>
         <li><a href="#teamResults" data-transition="slide">Team Results</a></li>
         <li><a href="#playground" data-transition="slide">Playground</a></li>
         <li><a href="#adminTest" data-transition="slide">Admin</a></li>
