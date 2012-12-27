@@ -6,6 +6,7 @@ var biscatoPort;
 var biscatoQuestionaireSubURL = "/teamhealth/questionaire";
 var biscatoAnswerSubURL = "/teamhealth/answers";
 var biscatoStatisticsSubURL = "/teamhealth/statistics";
+var biscatoTestAnswerSubURL = "/teamhealth/testanswer";
 
 /*************************************************************************************
 *************** Vote section**********************************************************
@@ -148,15 +149,68 @@ $('#myVotes').live('pageshow',function(event, ui){
 /*************************************************************************************
 *************** Team Results section *************************************************
 *************************************************************************************/
+
 $('#teamResults').live('pageshow',function(event, ui){
 	// determine time frame for data selection --> TODO
 	// get team --> TODO
 	// get users for team --> TODO
 	// get data for users in specified timeframe --> TODO
 	// display chart for retrieved data
-	
-	var biscatoStatisticsURL = getBiscatoStatisticsURL();
-	
+
+    $("#teamResultsTimeframe").bind( "change",function(event, ui){
+        handleChangedTimeframeForTeamResults(event, ui);
+    });
+
+    loadTeamResults();
+
+});
+
+function handleChangedTimeframeForTeamResults(event, ui){
+    var from = getStartTimeFromTimeframe($("#teamResultsTimeframe").val());
+    if(from != undefined){
+//        var to = new Date().getMilliseconds();
+        var to = Date.parse(new Date());
+        loadTeamResults(from, to);
+    }
+}
+
+function getStartTimeFromTimeframe(timeframe){
+    var date = new Date();
+    switch (timeframe){
+        case "1week":
+            date.setDate(date.getDate()-7);
+            break;
+        case "2week":
+            date.setDate(date.getDate()-14);
+            break;
+        case "3week":
+            date.setDate(date.getDate()-21);
+            break;
+        case "4week":
+            date.setDate(date.getDate()-28);
+            break;
+        case "full":
+            date.setYear(date.getYear()-1);
+            break;
+        case "half":
+            date.setMonth(date.getMonth()-6);
+            break;
+        case "all":
+            date.setYear(2011);
+            break;
+        default: //standard
+            date.setYear(1980); //TODO: implement a logic to select only "last vote"
+            break;
+    }
+
+    return Date.parse(date);
+}
+
+function loadTeamResults(from, to){
+    var biscatoStatisticsURL = getBiscatoStatisticsURL();
+    if(from != undefined){
+        biscatoStatisticsURL += "?from="+from+"&to="+to;
+    }
     $.ajax(
         {
             type: "GET",
@@ -173,7 +227,7 @@ $('#teamResults').live('pageshow',function(event, ui){
 
             }
         });
-});
+}
 
 function displayTeamResults(data){
 	 
@@ -212,8 +266,10 @@ function displayTeamResults(data){
         // the legend to overflow the container.
         legend: {
             show: true,
-            location: 's', //ne, e
-//            rendererOptions:{numberColumns: 2},
+            location: 's', //n, ne, e
+            rendererOptions:{
+                numberRows: 1
+            },
 //            xoffset:55,
 //            yoffset:-100
             placement: 'outsideGrid'
@@ -322,6 +378,13 @@ function getBiscatoStatisticsURL(){
 	url = getBaseURL();
 	url += biscatoStatisticsSubURL;
 	return url;
+}
+
+function getBiscatoTestAnswerURL(){
+    var url;
+    url = getBaseURL();
+    url += biscatoTestAnswerSubURL;
+    return url;
 }
 
 /*************************************************************************************
@@ -683,7 +746,31 @@ function answersDeletedSuccess(data){
 	alert("All votes have been deleted successfully");
 }
 
+/******* Creation of All Answers on Server ******************************/
 
+function createTestAnswersServer(){
+    var biscatoAnswerURL = getBiscatoTestAnswerURL();
 
+    $.ajax(
+        {
+            type: "POST",
+            url: biscatoAnswerURL,
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                handleCreateServerTestAnswers(data.question);
+            },
+            error: function (msg, url, line) {
+                alert('error trapped in error: function(msg, url, line)');
+                alert('msg = ' + msg + ', url = ' + url + ', line = ' + line);
+
+            }
+        });
+}
+
+function handleCreateServerTestAnswers(data){
+    alert("Testanswers successfully created by the server")
+}
 
 
