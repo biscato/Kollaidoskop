@@ -8,6 +8,10 @@
         <de>Vergangene Abstimmungen</de>
         <en>My Votes</en>
     </myVotes>
+    <myData>
+        <de>Meine Daten</de>
+        <en>My Data</en>
+    </myData>
     <startTitle>
         <de>Hauptmenü</de>
         <en>Home</en>

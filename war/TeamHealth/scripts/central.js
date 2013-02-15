@@ -5,8 +5,10 @@ var biscatoHost;
 var biscatoPort;
 var biscatoQuestionaireSubURL = "/teamhealth/questionaire";
 var biscatoAnswerSubURL = "/teamhealth/answers";
+var biscatoUserSubURL = "/teamhealth/users";
 var biscatoStatisticsSubURL = "/teamhealth/statistics";
 var biscatoTestAnswerSubURL = "/teamhealth/testanswer";
+var biscatoTestTeamAndUserSubURL = "/teamhealth/teamAndUsers";
 
 /*************************************************************************************
 *************** Vote section**********************************************************
@@ -145,6 +147,36 @@ $('#myVotes').live('pageshow',function(event, ui){
             series:[{color:'#5FAB78'}]
         });
 });
+
+/*************************************************************************************
+ *************** My Data section**********************************************************
+ *************************************************************************************/
+$('#myData').live('pagebeforecreate',function(event, ui){
+
+    var biscatoUserURL = getBiscatoUserURL();
+
+    $.ajax(
+        {
+            type: "GET",
+            url: biscatoUserURL,
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                displayUserData(data.user);
+            },
+            error: function (msg, url, line) {
+                alert('error trapped in error: function(msg, url, line)');
+                alert('msg = ' + msg + ', url = ' + url + ', line = ' + line);
+
+            }
+        });
+});
+
+function displayUserData(){
+    alert("myData result can be displayed");
+}
+
 
 /*************************************************************************************
 *************** Team Results section *************************************************
@@ -346,6 +378,14 @@ function displayTeamResults(data){
 }
 
 /*************************************************************************************
+ *************** Create New Survey ***************************************************
+ *************************************************************************************/
+
+function createNewSurvey(){
+    alert("create new survey")
+}
+
+/*************************************************************************************
 *************** generic Stuff ********************************************************
 *************************************************************************************/
 function getBaseURL(){
@@ -387,6 +427,12 @@ function getBiscatoTestAnswerURL(){
     return url;
 }
 
+function getBiscatoTestTeamAndUserURL(){
+    var url;
+    url = getBaseURL();
+    url += biscatoTestTeamAndUserSubURL;
+    return url;
+}
 /*************************************************************************************
 *************** Test Stuff ***********************************************************
 *************************************************************************************/
@@ -428,8 +474,8 @@ function getTestQuestionsInJSONFormat(){
     		"language" : questionCatalogue[i].language,
     		"description" : questionCatalogue[i].description,
     		"category" : questionCatalogue[i].category,
-    		"categoryId" : questionCatalogue[i].categoryId,
-    	});
+    		"categoryId" : questionCatalogue[i].categoryId
+        });
     }
 
     var myString = JSON.stringify(jsonQuestions);
@@ -774,3 +820,29 @@ function handleCreateServerTestAnswers(data){
 }
 
 
+/******* Creation of One Team with Users ******************************/
+
+function createTeamWithUsers(){
+    var biscatoTestTeamAndUserURL = getBiscatoTestTeamAndUserURL();
+
+    $.ajax(
+        {
+            type: "POST",
+            url: biscatoTestTeamAndUserURL,
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                handleCreateTeamAndUser(data);
+            },
+            error: function (msg, url, line) {
+                alert('error trapped in error: function(msg, url, line)');
+                alert('msg = ' + msg + ', url = ' + url + ', line = ' + line);
+
+            }
+        });
+}
+
+function handleCreateTeamAndUser(data){
+    alert("Testanswers successfully created by the server")
+}

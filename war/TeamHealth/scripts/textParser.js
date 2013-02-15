@@ -10,6 +10,10 @@ $( document ).delegate("#start", "pageinit", function() {
 function fillUITextsForStartPage(){
     $("#startTitle").html(getText("startTitle"));
     $("#myVotesText").html(getText("myVotes"));
+    $("#myDataText").html(getText("myData"));
+    $("#myDataTextBack").html(getText("back"));
+    $("#myDataTextHeader").html(getText("myData"));
+    $("#myDataTextFooter").html(getText("myData"));
     //TODO: add all other UI elements
 }
 

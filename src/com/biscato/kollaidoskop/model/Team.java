@@ -12,15 +12,15 @@ import com.google.appengine.api.datastore.Key;
 @XmlRootElement
 @PersistenceCapable
 public class Team {
-	
+
 	@PrimaryKey //Annotation for jersey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
+	private int teamId;
 	private String name;
 	private String company;
 	private String email;
 	private String website;
-	private Long[] questionaireQuestionIds;
 	private boolean active;
 	
 	public Team(){
@@ -35,6 +35,14 @@ public class Team {
 			return -1;
 	}
 	
+
+	public int getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
 	public String getName() {
 		return name;
 	}
@@ -58,12 +66,6 @@ public class Team {
 	}
 	public void setWebsite(String website) {
 		this.website = website;
-	}
-	public Long[] getQuestionaireQuestionIds() {
-		return questionaireQuestionIds;
-	}
-	public void setQuestionaireQuestionIds(Long[] questionaireQuestionIds) {
-		this.questionaireQuestionIds = questionaireQuestionIds;
 	}
 	public boolean isActive() {
 		return active;

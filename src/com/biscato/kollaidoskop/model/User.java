@@ -14,15 +14,16 @@ import com.google.appengine.api.datastore.Key;
 @XmlRootElement
 @PersistenceCapable
 public class User {
-	
+
 	@PrimaryKey //Annotation for jersey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String company;
-	private Long[] memberInTeam;
+	private long[] memberInTeam;
 	private String pwdHash;
 	private String salt;
 	private String role;
@@ -39,6 +40,13 @@ public class User {
 			return this.key.getId();
 		else 
 			return -1;
+	}
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 	
 	public String getFirstName() {
@@ -73,11 +81,11 @@ public class User {
 		this.company = company;
 	}
 
-	public Long[] getMemberInTeam() {
+	public long[] getMemberInTeam() {
 		return memberInTeam;
 	}
 
-	public void setMemberInTeam(Long[] memberInTeam) {
+	public void setMemberInTeam(long[] memberInTeam) {
 		this.memberInTeam = memberInTeam;
 	}
 

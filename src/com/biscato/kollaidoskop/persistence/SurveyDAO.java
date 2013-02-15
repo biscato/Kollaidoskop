@@ -4,15 +4,15 @@ import java.util.List;
 
 import javax.jdo.PersistenceManager;
 
+import com.biscato.kollaidoskop.model.Answer;
 import com.biscato.kollaidoskop.model.Survey;
-import com.biscato.kollaidoskop.model.Team;
 
-public class TeamDAO implements EntityDAO<Team> {
+public class SurveyDAO implements EntityDAO<Survey> {
 
 	@Override
-	public Team createEntity(Team entity) {
+	public Survey createEntity(Survey entity) {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		Team newEntity;
+		Survey newEntity;
 		
 		try{
 			newEntity = pm.makePersistent(entity);
@@ -24,13 +24,13 @@ public class TeamDAO implements EntityDAO<Team> {
 	}
 
 	@Override
-	public List<Team> createAllEntities(List<Team> entities) {
+	public List<Survey> createAllEntities(List<Survey> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean deleteEntity(Team entity) {
+	public boolean deleteEntity(Survey entity) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -42,19 +42,19 @@ public class TeamDAO implements EntityDAO<Team> {
 	}
 
 	@Override
-	public Team updateEntity(Team entity) {
+	public Survey updateEntity(Survey entity) {
+		// TODO Implement cancellation / inactivation of survey
+		return null;
+	}
+
+	@Override
+	public Survey getEntityForId(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Team getEntityForId(long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Team> getAllEntities() {
+	public List<Survey> getAllEntities() {
 		// TODO Auto-generated method stub
 		return null;
 	}
