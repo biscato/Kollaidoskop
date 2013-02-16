@@ -25,7 +25,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TeamHealth/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="69" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.65217394">
+                <state line="32" column="55" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.4047976">
                   <folding />
                 </state>
               </provider>
@@ -65,7 +65,7 @@
           <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TeamHealth/resources/strings.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.31380752">
+                <state line="12" column="9" selection-start="264" selection-end="264" vertical-scroll-proportion="0.25104603">
                   <folding />
                 </state>
               </provider>
@@ -431,14 +431,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamHealth/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="69" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.65217394">
+        <state line="32" column="55" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.4047976">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamHealth/resources/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.31380752">
+        <state line="12" column="9" selection-start="264" selection-end="264" vertical-scroll-proportion="0.25104603">
           <folding />
         </state>
       </provider>
