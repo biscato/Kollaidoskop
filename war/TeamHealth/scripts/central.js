@@ -46,8 +46,8 @@ function displayAllQuestions(targetDOMElement){
 
     for(var i=0; i < biscatoQuestions.length; i++){
         questionsCounter++;
-        html += "<div>Question # "+questionsCounter+ ": </div>"; //TODO: localize text
-        html += "<div><label>" + biscatoQuestions[i].description + "</label></div>"; //TODO: localize text
+        html += "<div>"+questionsCounter+ ") "; //TODO: localize text
+        html += "<label>" + biscatoQuestions[i].description + "</label></div>"; //TODO: localize text
         html += "<div data-role='fieldcontain'>";
         html += "<input type='range' name='slider-" + i + "' id='slider-" + i + "' value='" + sliderStartValue + "' min='" + sliderMinValue + "' max='" + sliderMaxValue + "' />";
         html += "<label for='slider-" + i + "'></label>"; //TODO: localize text
@@ -163,7 +163,7 @@ $('#myData').live('pagebeforecreate',function(event, ui){
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                displayUserData(data.user);
+                displayUserData(data);
             },
             error: function (msg, url, line) {
                 alert('error trapped in error: function(msg, url, line)');
@@ -173,7 +173,7 @@ $('#myData').live('pagebeforecreate',function(event, ui){
         });
 });
 
-function displayUserData(){
+function displayUserData(data){
     alert("myData result can be displayed");
 }
 
@@ -431,6 +431,13 @@ function getBiscatoTestTeamAndUserURL(){
     var url;
     url = getBaseURL();
     url += biscatoTestTeamAndUserSubURL;
+    return url;
+}
+
+function getBiscatoUserURL(){
+    var url;
+    url = getBaseURL();
+    url += biscatoUserSubURL;
     return url;
 }
 /*************************************************************************************

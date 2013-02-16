@@ -38,7 +38,7 @@
 
     <ul data-role="listview">
         <li><a href="#vote" data-transition="slide">Vote Now!</a></li>
-        <li><a href="#myVotes" data-transition="slide"><span id="myVotesText"></span></a></li>
+        <!--<li><a href="#myVotes" data-transition="slide"><span id="myVotesText"></span></a></li>-->
         <li><a href="#myData" data-transition="slide"><span id="myDataText"></span></a></li>
         <li><a href="#teamResults" data-transition="slide">Team Results</a></li>
         <li><a href="#createSurvey" data-transition="slide">Create New Survey</a></li>
@@ -71,22 +71,22 @@
 </div>
 
 <!-----------------------my Votes Results----------------------->
-<div data-role="page" id="myVotes">
+<!--<div data-role="page" id="myVotes">-->
 
-    <div data-role="header" data-position="fixed">
-        <a href="#start">Zur&uuml;ck</a>                                    <!--TODO: localize text-->
-        <h1>My Votes</h1>                                                   <!--TODO: localize text-->
-    </div>
+    <!--<div data-role="header" data-position="fixed">-->
+        <!--<a href="#start">Zur&uuml;ck</a>                                    &lt;!&ndash;TODO: localize text&ndash;&gt;-->
+        <!--<h1>My Votes</h1>                                                   &lt;!&ndash;TODO: localize text&ndash;&gt;-->
+    <!--</div>-->
 
-    <div data-role="content">
-        <div id="myVotesChart" style="width: 300px; height: 200px;"></div>
-    </div>
+    <!--<div data-role="content">-->
+        <!--<div id="myVotesChart" style="width: 300px; height: 200px;"></div>-->
+    <!--</div>-->
 
-    <div data-role="footer" data-position="fixed">
-        <h4>test</h4>
-    </div>
+    <!--<div data-role="footer" data-position="fixed">-->
+        <!--<h4>test</h4>-->
+    <!--</div>-->
 
-</div>
+<!--</div>-->
 
 <!-----------------------my Data----------------------->
 <div data-role="page" id="myData">
@@ -100,13 +100,13 @@
         <div data-role="fieldcontain">
             <label for="firstName">First Name:</label>
             <input type="text" name="name" id="firstName" value=""  />
-            <label for="firstName">Last Name:</label>
+            <label for="lastName">Last Name:</label>
             <input type="text" name="name" id="lastName" value=""  />
-            <label for="firstName">Email Address:</label>
+            <label for="email">Email Address:</label>
             <input type="text" name="name" id="email" value=""  />
             <label for="role">Role:</label>
             <input type="text" name="name" id="role" value=""  />
-            <label for="firstName">Company:</label>
+            <label for="company">Company:</label>
             <input type="text" name="name" id="company" value=""  />
         </div>
     </div>
@@ -209,12 +209,25 @@
 <!-----------------------Manage Team Page----------------------->
 <div data-role="page" id="manageTeam">
 
-    <div data-role="header">
+    <div data-role="hweader">
         <a href="#start">Zur&uuml;ck</a>                                    <!--TODO: localize text-->
         <h1>Manage Team</h1>                                                <!--TODO: localize text-->
     </div>
 
     <div data-role="content">
+
+        <div data-role="fieldcontain">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="name" id="firstName" value=""  />
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="name" id="lastName" value=""  />
+            <label for="email">Email Address:</label>
+            <input type="text" name="name" id="email" value=""  />
+            <label for="role">Role:</label>
+            <input type="text" name="name" id="role" value=""  />
+            <label for="company">Company:</label>
+            <input type="text" name="name" id="company" value=""  />
+        </div>
 
         <!--TODO: display current team members -->
         <!--TODO: display tentative team members -->
@@ -258,7 +271,7 @@
 <div data-role="page" id="testingFunctionality">
 
     <div data-role="header">
-        <a href="#start">Zur&uuml;ck</a>                                    <!--TODO: localize text-->
+        <a href="#start">Zur&uuml;ck</a>    <!--TODO: Home statt back!!!!-->                                <!--TODO: localize text-->
         <h1>Testing Page</h1>                                            <!--TODO: localize text-->
     </div>
 

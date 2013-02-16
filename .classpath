@@ -5,18 +5,11 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-labs.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-endpoints.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/asm-3.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/asm-4.0.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-api-jdo-3.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-api-jpa-3.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-appengine-2.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-core-3.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jpa_2.0_spec-1.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-core-asl-1.9.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-jaxrs-1.9.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-mapper-asl-1.9.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-xc-1.9.2.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/jdo-api-3.0.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jersey-apache-client-1.15.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jersey-atom-abdera-1.15.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jersey-client-1.15.jar"/>
@@ -30,9 +23,7 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jersey-spring-1.15.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jettison-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/jta-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/oauth-client-1.15.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/oauth-server-1.15.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/oauth-signature-1.15.jar"/>
