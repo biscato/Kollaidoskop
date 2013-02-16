@@ -4,7 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-labs.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-endpoints.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jpa_2.0_spec-1.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-core-asl-1.9.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-jaxrs-1.9.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-mapper-asl-1.9.2.jar"/>
